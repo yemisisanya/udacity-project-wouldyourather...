@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Login from './components/login/login';
+import PrivateRoute from './components/privateRoute';
+import Home from './components/home/home';
+import Question from './components/question/question';
+import Results from './components/results/results';
+import Newquestion from './components/newquestion/newquestion';
+import Leaderboard from './components/leaderboard/leaderboard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Route path="/login" component={Login} />
+        <PrivateRoute path="/" exact component={Home}/>
+        <PrivateRoute path ="/question/:qId" component={Question}/>
+        <PrivateRoute  path ="/:qId/results" component={Results}/>
+        <PrivateRoute path ="/add" component={Newquestion}/>
+        <PrivateRoute path ="/leaderboard" component={Leaderboard}/>
+      </div>
+    </Router>
   );
 }
 

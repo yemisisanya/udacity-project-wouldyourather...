@@ -1,0 +1,11 @@
+.navbar {
+    background-color: beige;
+}
+
+.navMain .nav-item {
+    padding-right: 100px !important;
+}
+
+.btn.btn-secondary {
+    background-color:lightseagreen !important
+}

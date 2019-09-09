@@ -1,0 +1,17 @@
+.color {
+	background-color: pink;
+	max-height:150px;
+    float: center;
+    margin:20px
+  }
+  .noColor {
+	max-height:150px;
+	float:center;
+    background-color: lightgray;
+    margin:20px
+  }
+
+.card {
+	display: inherit !important
+}
+
