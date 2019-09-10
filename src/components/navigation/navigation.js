@@ -21,6 +21,7 @@ class Navigation extends Component {
 		  }
 
         return (
+            <div>
                 <Navbar>
                     <Nav className="navMain">
                         <NavItem>
@@ -41,6 +42,7 @@ class Navigation extends Component {
                         </NavItem>
                     </Nav>
                 </Navbar>
+                </div>
         )
     }
 }

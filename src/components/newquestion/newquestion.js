@@ -36,16 +36,18 @@ onChange = (e) => {
 onSubmit = (e) => {
 	e.preventDefault();
 	
-	this.props.dispatch(addQuestion(this.state.question))
-	 this.setState(() => ({
-		question: {
-			optionOne: '',
-			optionTwo:'',
-			author:''
-		},
-		home:true
-	}))
-
+	if(this.state.question.optionOne !== '' && this.state.question.optionTwo !== ''){
+		this.props.dispatch(addQuestion(this.state.question))
+		this.setState(() => ({
+		   question: {
+			   optionOne: '',
+			   optionTwo:'',
+			   author:''
+		   },
+		   home:true
+	   }))
+	}
+	
 }
 render() {
 if (this.state.home === true) {

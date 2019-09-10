@@ -36,6 +36,8 @@ render() {
 	return(
 		<Col sm="6">
 			<div className="questionBody">
+				{ Object.keys(question).length !== 0 ?
+				<div>
 			<UserProfile id={user}/>
                <Card body>
 				   {question.map((m) => {
@@ -65,7 +67,13 @@ render() {
 					   <Button onClick={(e) =>this.submit(qId,e)} value="submit">Submit</Button>
 					   </div>
 				   })}
-           </Card>
+		   </Card> 
+		   </div>
+		   : <div>
+			   <h3>Oops! 404 - Page not found.</h3>
+			   <p>What are you trying to do?</p>
+			   </div>
+				}
 			</div>
 			
             </Col>

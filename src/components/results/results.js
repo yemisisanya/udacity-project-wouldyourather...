@@ -9,8 +9,9 @@ class Results extends Component {
 		const {user, qId, question, percentVoteOne, percentVoteTwo} = this.props
 		
 		return (
+			<div>
+				{ Object.keys(question).length !== 0 ?
 			<div className = "results" >
-			
 			{
 			question.map(m=>
 				<div key={m.id}>
@@ -50,7 +51,13 @@ class Results extends Component {
 					</div>
 				</div>
 				)
-			}</div>
+			}</div> :
+			<div>
+			   <h3>Oops! 404 - Page not found.</h3>
+			   <p>What are you trying to do?</p>
+			   </div>
+		}
+			</div>
 		)
 	}
 }
