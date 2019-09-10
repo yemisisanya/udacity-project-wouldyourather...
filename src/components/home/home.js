@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import './home.css'
-import { Nav, NavItem, NavbarBrand, NavLink, TabContent, TabPane, Row, Col, Card, CardTitle, CardText, Button } from 'reactstrap';
+import { Nav, NavItem, NavLink, TabContent, TabPane, Row, Col, Card, CardTitle, CardText, Button } from 'reactstrap';
 import { Redirect } from 'react-router-dom';
 import { loadQuestions, userQuestions } from '../../actions/question.actions';
 
